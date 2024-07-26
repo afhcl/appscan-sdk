@@ -43,11 +43,13 @@ implements	IModelXMLConstants
 		try {
 			initialize(directory);
 		} catch (TransformerConfigurationException e) {
-			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
 		}
-		m_config = new DOMWriter(directory, m_configFileName, m_builder);
+		try {
+			m_config = new DOMWriter(directory, m_configFileName, m_builder);
+		} catch (Exception e) {
+			logger.error("Error initializing DOMWriter", e);
+		}
 	}
 
 	@Override

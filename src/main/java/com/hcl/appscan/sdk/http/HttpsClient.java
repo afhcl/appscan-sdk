@@ -281,7 +281,6 @@ public class HttpsClient {
                });
             }
             catch(Exception e){
-                e.printStackTrace();
             }
 			HttpsURLConnection conn = null;
 			conn = (HttpsURLConnection) requestURL.openConnection();

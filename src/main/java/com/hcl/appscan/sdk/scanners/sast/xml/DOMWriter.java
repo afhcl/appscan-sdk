@@ -239,7 +239,6 @@ public final class DOMWriter {
 				try {
 					m_stream.close();
 				} catch (IOException e) {
-					e.printStackTrace();
 				}
 				m_stream = null;
 			}
